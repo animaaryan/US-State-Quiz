@@ -46,7 +46,7 @@ score = 0
 while score < 50:
 
     # Show a guess window on the screen
-    answer_state = screen.textinput(title=f"{score}/50 states correct", prompt="What's another state's name?")
+    answer_state = screen.textinput(title=f"{score}/50 states correct", prompt="What's another state's name?".title())
 
     # Clear existing
     wrong_guess.clear()
@@ -67,7 +67,6 @@ while score < 50:
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
         break
-    user_guess = answer_state.title()
 
     # Check if the user guess is correct and then add it to the list
     if user_guess in all_states:
