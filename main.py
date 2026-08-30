@@ -1,5 +1,4 @@
 import turtle
-from tkinter import font
 
 import pandas
 
@@ -81,7 +80,7 @@ while score < 50:
             score += 1
     else:
         wrong_guess.goto(0, 250)
-        wrong_guess.write("Incorrect Guess" ,align="center", font=("Georgia", 15, "bold"))
+        wrong_guess.write("Incorrect Guess", align="center", font=("Georgia", 15, "bold"))
 
 screen.exitonclick()
 print(correct_guesses)
