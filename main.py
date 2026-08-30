@@ -54,10 +54,16 @@ while score < 50:
 
     # Convert to title case
     if not answer_state:
+
+        # Create list for the missing states
         missing_states = []
+
+        # Loop through all the states to check which are missing
         for state in all_states:
             if state not in correct_guesses:
                 missing_states.append(state)
+
+        # Create a new csv file to add the missing states
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
         break
