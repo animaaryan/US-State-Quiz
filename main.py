@@ -54,6 +54,12 @@ while score < 50:
 
     # Convert to title case
     if not answer_state:
+        missing_states = []
+        for state in all_states:
+            if state not in correct_guesses:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
         break
     user_guess = answer_state.title()
 
