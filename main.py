@@ -69,7 +69,7 @@ while score < 50:
         break
 
     # Convert to title case
-    user_guess = answer_state
+    user_guess = answer_state.title()
 
     # Check if the user guess is correct and then add it to the list
     if user_guess in all_states:
